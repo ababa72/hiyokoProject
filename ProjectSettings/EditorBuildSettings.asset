@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/title.unity
+  - enabled: 1
+    path: Assets/Scenes/TestStage/tanaka.unity
+  - enabled: 1
+    path: Assets/Scenes/TestStage/hirai.unity
+  - enabled: 1
+    path: Assets/Scenes/TestStage/ohura.unity
+  - enabled: 1
+    path: Assets/Scenes/TestStage/sano.unity
+  - enabled: 1
+    path: Assets/Scenes/TestStage/satomune.unity
