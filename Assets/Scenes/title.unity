@@ -213,6 +213,7 @@ GameObject:
   - 92: {fileID: 1419773672}
   - 124: {fileID: 1419773671}
   - 81: {fileID: 1419773670}
+  - 114: {fileID: 1419773675}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -285,6 +286,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1419773675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1419773669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea15d3af771c0f4d8d46749c56a4468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonPrefab: {fileID: 155780, guid: f2fda379c0871cc4d9c9f128f3538275, type: 2}
+  _stageInfo:
+  - _displayName: "\u5927\u6D66"
+    _scenePath: ohura
+  - _displayName: "\u91CC\u5B97"
+    _scenePath: satomune
+  - _displayName: "\u4F50\u91CE"
+    _scenePath: sano
+  - _displayName: "\u5E73\u4E95"
+    _scenePath: hirai
+  - _displayName: "\u7530\u4E2D"
+    _scenePath: tanaka
 --- !u!1 &1637460628
 GameObject:
   m_ObjectHideFlags: 0
