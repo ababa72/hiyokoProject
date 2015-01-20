@@ -18,9 +18,9 @@ public class CTitleMain : MonoBehaviour
 			//プレハブからボタンを生成
 			GameObject button = Instantiate(_buttonPrefab) as GameObject;
 			// 親子関係設定
-			button.transform.SetParent( canvas.transform );
+			button.transform.SetParent( canvas.transform, false );
 			// 表示位置設定
-			button.transform.localPosition = new Vector2( -180f, -80f + 40f * i );
+			button.transform.localPosition = new Vector2( 0, 80 * i - 160 );
 			// テキスト設定
 			button.transform.FindChild("Text").GetComponent<Text>().text = _stageInfo[i]._displayName;
 			// ボタンイベント設定
