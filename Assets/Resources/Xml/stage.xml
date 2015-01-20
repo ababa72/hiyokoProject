@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <version>1</version>
+  <stageList>
+    <!--
+    ・ステージID
+    <data id="0">
+      ・ゲームモード
+      <mode>0</mode>
+      ・クリア条件(簡単、普通、難しい)
+      <borderLine>
+        <easy>10</easy>
+        <normal>20</normal>
+        <hard>30</hard>
+      </borderLine>
+    </data>
+    -->
+    <data id="0">
+      <mode>0</mode>
+      <borderLine>
+        <level1>10</level1>
+        <level2>20</level2>
+        <level3>30</level3>
+      </borderLine>
+    </data>
+    <data id="1">
+      <mode>1</mode>
+      <borderLine>
+        <level1>20</level1>
+        <level2>40</level2>
+        <level3>60</level3>
+      </borderLine>
+    </data>
+    <data id="2">
+      <mode>2</mode>
+      <borderLine>
+        <level1>30</level1>
+        <level2>60</level2>
+        <level3>90</level3>
+      </borderLine>
+    </data>
+  </stageList>
+</root>
