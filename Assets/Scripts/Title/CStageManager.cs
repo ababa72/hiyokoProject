@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -14,8 +14,19 @@ public class CStageManager : SingletonMonoBehaviour<CStageManager>
 	// XMLファイルリソース
 	public TextAsset _stageXml;
 	// ステージ情報配列
-	public List<CStageData> _stageDataList;
-	
+	private List<CStageData> _stageDataList = null;
+	public int Length()
+	{
+		if( _stageDataList == null ) return -1;
+		return _stageDataList.Count;
+	}
+	public CStageData this[int i]
+	{
+		set{_stageDataList[i] = value;}
+		get{return _stageDataList[i];}
+	}
+
+
 	/**
      * 起動時処理
      */

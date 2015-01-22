@@ -349,6 +349,8 @@ MonoBehaviour:
     _scenePath: hirai
   - _displayName: "\u7530\u4E2D"
     _scenePath: tanaka
+  - _displayName: "\u30B2\u30FC\u30E0\u958B\u59CB"
+    _scenePath: stageSelect
 --- !u!1 &1637460628
 GameObject:
   m_ObjectHideFlags: 0
