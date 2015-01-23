@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a34b246bf741d4cb88e4c61c78a5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stageXml: {fileID: 4900000, guid: 2980f6c3dabba3243a2119781ffcf78d, type: 3}
+  _stageXml: {fileID: 4900000, guid: 2442fcee7d87e274da2f2662f6a9f460, type: 3}
 --- !u!4 &1408839960
 Transform:
   m_ObjectHideFlags: 0
