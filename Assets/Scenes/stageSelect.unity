@@ -439,7 +439,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408839958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cadc975fc25e32640909d237828fd01c, type: 3}
+  m_Script: {fileID: 11500000, guid: 23a34b246bf741d4cb88e4c61c78a5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _stageXml: {fileID: 4900000, guid: 2980f6c3dabba3243a2119781ffcf78d, type: 3}
@@ -614,4 +614,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e5b8bd6edc4504e9a1d43eb0396d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _iconPrefab: {fileID: 128542, guid: 7776433217441ca4e94c0d2b87df5444, type: 2}
+  _iconPrefab: {fileID: 113890, guid: 7776433217441ca4e94c0d2b87df5444, type: 2}

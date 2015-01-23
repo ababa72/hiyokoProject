@@ -16,7 +16,7 @@ public class CIconSetting : MonoBehaviour
 		float iconHeight = 0;
 		// ステージ選択用Iconを動的生成
 		GameObject canvas = GameObject.Find("Canvas/ScrollView/Icons");
-		for( int i = 0 ; i < CStageManager.Instance.Length() ; i++ )
+		for( int i = 0 ; i < CStageDataManager.Instance.Length() ; i++ )
 		{
 			//プレハブからボタンを生成
 			GameObject icon = Instantiate(_iconPrefab) as GameObject;
@@ -25,7 +25,7 @@ public class CIconSetting : MonoBehaviour
 			// 表示位置設定
 			//icon.transform.localPosition = new Vector2( -90 + 90*(i%3), -90 * (i/3) + 180 );
 			// テキスト設定
-			icon.transform.FindChild("Numbers").GetComponent<NumberScript>()._num = CStageManager.Instance[i].id + 1;
+			icon.transform.FindChild("Numbers").GetComponent<NumberScript>()._num = CStageDataManager.Instance[i].id + 1;
 			// アンロック設定
 			// TODO
 			if( i < 10 )
@@ -41,11 +41,11 @@ public class CIconSetting : MonoBehaviour
 			iconHeight = icon.GetComponent<RectTransform>().sizeDelta.y;
 		}
 		Debug.Log(iconHeight);
-		Debug.Log( (float)(iconHeight*Math.Ceiling((double)CStageManager.Instance.Length() / 3)) );
+		Debug.Log( (float)(iconHeight*Math.Ceiling((double)CStageDataManager.Instance.Length() / 3)) );
 
 		// スクロールサイズ設定
 		RectTransform contentRectTrans = _content.GetComponent<RectTransform>();
-		contentRectTrans.sizeDelta = new Vector2( contentRectTrans.sizeDelta.x, (float)(iconHeight*Math.Ceiling((double)CStageManager.Instance.Length() / 3)));
+		contentRectTrans.sizeDelta = new Vector2( contentRectTrans.sizeDelta.x, (float)(iconHeight*Math.Ceiling((double)CStageDataManager.Instance.Length() / 3)));
 		
 	}
 	

@@ -9,7 +9,7 @@ using System.IO;
  * ステージ情報管理クラス
  * シングルトンパターンの為 sceneをまたいでも削除されない
  */
-public class CStageManager : SingletonMonoBehaviour<CStageManager>
+public class CStageDataManager : SingletonMonoBehaviour<CStageDataManager>
 {
 	// XMLファイルリソース
 	public TextAsset _stageXml;
