@@ -57,7 +57,7 @@ public class NumberScript : MonoBehaviour {
 			// 親子関係設定
 			base_ins.transform.SetParent( this.transform, false );
 			// 表示位置設定
-			base_ins.transform.localPosition = new Vector2( (80*_rate) * i - ((80*_rate)*(number_digit-1)/2), 0 );
+			base_ins.transform.localPosition = new Vector2( (200*_rate) * i - ((200*_rate)*(number_digit-1)/2), 0 );
 			base_ins.transform.localScale = new Vector2( _rate, _rate );
 
 			// 数値設定
