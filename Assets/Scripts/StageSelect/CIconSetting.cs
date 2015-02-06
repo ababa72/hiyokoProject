@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
@@ -27,9 +26,9 @@ public class CIconSetting : MonoBehaviour
 			// テキスト設定
 			icon.transform.FindChild("Numbers").GetComponent<NumberScript>()._num = CStageDataManager.Instance[i].id + 1;
 			// アンロック設定
-			// TODO
-			if( i < 10 )
+			if( CStageDataManager.Instance[i].unlock )
 			{
+				// キーマークを非表示にする
 				icon.transform.FindChild("KeyMark").gameObject.SetActive( false );
 			}
 			// ボタンイベント設定
@@ -58,6 +57,7 @@ public class CIconSetting : MonoBehaviour
 	void MyOnClick( int index )
 	{
 		Debug.Log( index );
+		//CStageDataManager.Instance[ index ].mode
 		// シーン遷移
 		//Application.LoadLevel(_stageInfo[ index ]._scenePath);
 	}

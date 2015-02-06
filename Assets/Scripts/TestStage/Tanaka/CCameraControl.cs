@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CCameraControl : MonoBehaviour
@@ -26,6 +27,15 @@ public class CCameraControl : MonoBehaviour
 
 	void Start()
 	{
+		// カメラ角度設定スライダー
+		Slider slider = GameObject.Find("Canvas/Slider").GetComponent <Slider> ();
+		slider.onValueChanged.AddListener((value) => {
+			// カメラ角度設定
+			Camera.main.transform.rotation = Quaternion.AngleAxis( value, new Vector3(1,0,0) );
+			// スライダーのつまみ部分に設定した角度を表示
+			GameObject.Find("Canvas/Slider/Handle Slide Area/Handle/CameraAngleText").GetComponent<Text>().text = Mathf.RoundToInt(value).ToString();
+		});
+
 	}
 	
 	void Update()

@@ -7,6 +7,8 @@
     <data id="0">
       ・ゲームモード
       <mode>0</mode>
+      ・初期から開放済み
+      <initial>1</initial>
       ・クリア条件(簡単、普通、難しい)
       <borderLine>
         <easy>10</easy>
@@ -17,6 +19,7 @@
     -->
     <data id="0">
       <mode>0</mode>
+      <initial>1</initial>
       <borderLine>
         <level1>10</level1>
         <level2>20</level2>
@@ -25,6 +28,7 @@
     </data>
     <data id="1">
       <mode>1</mode>
+      <initial>1</initial>
       <borderLine>
         <level1>20</level1>
         <level2>40</level2>
@@ -33,6 +37,7 @@
     </data>
     <data id="2">
       <mode>2</mode>
+      <initial>1</initial>
       <borderLine>
         <level1>30</level1>
         <level2>60</level2>
