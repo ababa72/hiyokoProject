@@ -8,7 +8,7 @@ public class CIconSetting : MonoBehaviour
 {
 	public GameObject _content;
 	public GameObject _iconPrefab;
-	
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -57,8 +57,26 @@ public class CIconSetting : MonoBehaviour
 	void MyOnClick( int index )
 	{
 		Debug.Log( index );
-		//CStageDataManager.Instance[ index ].mode
-		// シーン遷移
-		//Application.LoadLevel(_stageInfo[ index ]._scenePath);
+		// スクロール状態へなら選択可能
+		if( CStageSelectState.Instance._state == CStageSelectState.STATE.SCROLL )
+		{
+			// アンロックされているか
+			if( CStageDataManager.Instance[ index ].unlock )
+			{
+				// OK音再生
+				CSoundManager.Instance.PlaySE( 0 );
+				// window表示アニメーション
+				GameObject.Find("Canvas/DetailWindow").GetComponent<Animation>().Play( "WindowOpen" );
+				// 各パラメータを流し込む
+				GameObject.Find("Canvas/DetailWindow/Content/StageName").GetComponent<Text>().text = "ステージ" + (CStageDataManager.Instance[ index ].id + 1);
+				// 詳細ウィンドウ表示状態へ
+				CStageSelectState.Instance._state = CStageSelectState.STATE.DETAIL;
+			}
+			else
+			{
+				// NG音再生
+				CSoundManager.Instance.PlaySE( 1 );
+			}
+		}
 	}
 }
