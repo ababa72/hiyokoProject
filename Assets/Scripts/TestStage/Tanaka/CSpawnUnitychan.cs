@@ -39,7 +39,7 @@ public class CSpawnUnitychan : MonoBehaviour
 				// スクリプト取得
 				UnityChanControlScriptWithRgidBody script = (UnityChanControlScriptWithRgidBody)unitychan.GetComponent( "UnityChanControlScriptWithRgidBody" );
 				// 移動量を渡す
-				script._moveValue = (float)(0.3 + ( 0.7 * Random.value ));
+				script._moveValue = (float)(0.3f + ( 0.7f * Random.value ));
 			}
 		}
 	}
