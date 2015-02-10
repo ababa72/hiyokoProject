@@ -55,7 +55,7 @@ public class CSaveDataManager : SingletonMonoBehaviour<CSaveDataManager>
 	 */
 	public int getScore( int stage_id )
 	{
-		return PlayerPrefs.GetInt ("StageScore" + stage_id, -1);
+		return PlayerPrefs.GetInt ("StageScore" + stage_id, 0);
 	}
 
 	/**

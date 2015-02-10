@@ -104,8 +104,8 @@ public class CSoundManager : SingletonMonoBehaviour<CSoundManager>
 		{
 			if (false == source.isPlaying)
 			{
-				source.clip = SE [index];
-				source.Play ();
+				//source.clip = SE [index];
+				source.PlayOneShot (SE [index]);
 				return;
 			}
 		}

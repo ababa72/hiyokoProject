@@ -63,12 +63,25 @@ public class CIconSetting : MonoBehaviour
 			// アンロックされているか
 			if( CStageDataManager.Instance[ index ].unlock )
 			{
+				// ステージ詳細ウィンドウ表示
 				// OK音再生
 				CSoundManager.Instance.PlaySE( 0 );
 				// window表示アニメーション
 				GameObject.Find("Canvas/DetailWindow").GetComponent<Animation>().Play( "WindowOpen" );
 				// 各パラメータを流し込む
-				GameObject.Find("Canvas/DetailWindow/Content/StageName").GetComponent<Text>().text = "ステージ" + (CStageDataManager.Instance[ index ].id + 1);
+				GameObject.Find("Canvas/DetailWindow/Content/Title").GetComponent<Text>().text = "ステージ" + (CStageDataManager.Instance[ index ].id + 1);
+				//GameObject.Find("Canvas/DetailWindow/Content/borderLine").GetComponent<Text>().text = "ステージ" + (CStageDataManager.Instance[ index ].id + 1);
+				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level1").GetComponent<Text>().text = "Level1 : " + CStageDataManager.Instance[ index ].level1;
+				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level2").GetComponent<Text>().text = "Level2 : " + CStageDataManager.Instance[ index ].level2;
+				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level3").GetComponent<Text>().text = "Level3 : " + CStageDataManager.Instance[ index ].level3;
+				// スコア
+				GameObject.Find("Canvas/DetailWindow/Content/Score").GetComponent<Text>().text = "Score : " + CStageDataManager.Instance[ index ].score;
+				// クリア済みスタンプ
+				GameObject.Find("Canvas/DetailWindow/Content/ClearStamp").GetComponent<Image>().enabled = false;
+				if( CStageDataManager.Instance[ index ].isClear() )
+				{
+					GameObject.Find("Canvas/DetailWindow/Content/ClearStamp").GetComponent<Image>().enabled = true;
+				}
 				// 詳細ウィンドウ表示状態へ
 				CStageSelectState.Instance._state = CStageSelectState.STATE.DETAIL;
 			}
