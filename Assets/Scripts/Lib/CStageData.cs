@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /**
  * ステージ情報クラス
@@ -23,26 +24,20 @@ public class CStageData
 	}
 	
 	// クリア条件
-	private int[] _borderLine = new int[BORDERLINE_MAX];
-	public int level1
+	private Dictionary<BORDERLINE,int> _borderLine = new Dictionary<BORDERLINE,int>();
+	public Dictionary<BORDERLINE,int> level
 	{
-		get{ return _borderLine[BORDERLINE_LEVEL1]; }
+		get{ return _borderLine; }
 	}
-	public int level2
-	{
-		get{ return _borderLine[BORDERLINE_LEVEL2]; }
-	}
-	public int level3
-	{
-		get{ return _borderLine[BORDERLINE_LEVEL3]; }
-	}
-	
-	// クリア条件列挙
-	public const int BORDERLINE_LEVEL1 = 0;
-	public const int BORDERLINE_LEVEL2 = 1;
-	public const int BORDERLINE_LEVEL3 = 2;
-	public const int BORDERLINE_MAX = 3;
 
+	// クリア条件列挙
+	public enum BORDERLINE
+	{
+		NONE = -1,
+		LEVEL1 = 0,
+		LEVEL2,
+		LEVEL3
+	};
 
 
 	// データ部分
@@ -69,9 +64,9 @@ public class CStageData
 		_id = id;
 		_mode = mode;
 		_unlock = unlock;
-		_borderLine[ BORDERLINE_LEVEL1 ] = levels[ 0 ];
-		_borderLine[ BORDERLINE_LEVEL2 ] = levels[ 1 ];
-		_borderLine[ BORDERLINE_LEVEL3 ] = levels[ 2 ];
+		_borderLine[ BORDERLINE.LEVEL1 ] = levels[ 0 ];
+		_borderLine[ BORDERLINE.LEVEL2 ] = levels[ 1 ];
+		_borderLine[ BORDERLINE.LEVEL3 ] = levels[ 2 ];
 	}
 
 	/**
@@ -80,6 +75,6 @@ public class CStageData
 	public bool isClear()
 	{
 		// スコアがレベル1以上に達している
-		return ( _score >= _borderLine[ BORDERLINE_LEVEL1 ]);
+		return ( _score >= _borderLine[ BORDERLINE.LEVEL1 ]);
 	}
 }

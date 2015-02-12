@@ -9,8 +9,7 @@ public class CIconSetting : MonoBehaviour
 	public GameObject _content;
 	public GameObject _iconPrefab;
 
-	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
 		float iconHeight = 0;
 		// ステージ選択用Iconを動的生成
@@ -24,7 +23,7 @@ public class CIconSetting : MonoBehaviour
 			// 表示位置設定
 			//icon.transform.localPosition = new Vector2( -90 + 90*(i%3), -90 * (i/3) + 180 );
 			// テキスト設定
-			icon.transform.FindChild("Numbers").GetComponent<NumberScript>()._num = CStageDataManager.Instance[i].id + 1;
+			icon.transform.FindChild("Numbers").GetComponent<CNumberScript>()._num = CStageDataManager.Instance[i].id + 1;
 			// アンロック設定
 			if( CStageDataManager.Instance[i].unlock )
 			{
@@ -58,7 +57,7 @@ public class CIconSetting : MonoBehaviour
 	{
 		Debug.Log( index );
 		// スクロール状態へなら選択可能
-		if( CStageSelectState.Instance._state == CStageSelectState.STATE.SCROLL )
+		if( CStageSelectState.Instance.state == CStageSelectState.STATE.SCROLL )
 		{
 			// アンロックされているか
 			if( CStageDataManager.Instance[ index ].unlock )
@@ -71,9 +70,9 @@ public class CIconSetting : MonoBehaviour
 				// 各パラメータを流し込む
 				GameObject.Find("Canvas/DetailWindow/Content/Title").GetComponent<Text>().text = "ステージ" + (CStageDataManager.Instance[ index ].id + 1);
 				//GameObject.Find("Canvas/DetailWindow/Content/borderLine").GetComponent<Text>().text = "ステージ" + (CStageDataManager.Instance[ index ].id + 1);
-				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level1").GetComponent<Text>().text = "Level1 : " + CStageDataManager.Instance[ index ].level1;
-				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level2").GetComponent<Text>().text = "Level2 : " + CStageDataManager.Instance[ index ].level2;
-				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level3").GetComponent<Text>().text = "Level3 : " + CStageDataManager.Instance[ index ].level3;
+				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level1").GetComponent<Text>().text = "Level1 : " + CStageDataManager.Instance[ index ].level[ CStageData.BORDERLINE.LEVEL1 ];
+				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level2").GetComponent<Text>().text = "Level2 : " + CStageDataManager.Instance[ index ].level[ CStageData.BORDERLINE.LEVEL2 ];
+				GameObject.Find("Canvas/DetailWindow/Content/borderLine/Level3").GetComponent<Text>().text = "Level3 : " + CStageDataManager.Instance[ index ].level[ CStageData.BORDERLINE.LEVEL3 ];
 				// スコア
 				GameObject.Find("Canvas/DetailWindow/Content/Score").GetComponent<Text>().text = "Score : " + CStageDataManager.Instance[ index ].score;
 				// クリア済みスタンプ
@@ -83,7 +82,9 @@ public class CIconSetting : MonoBehaviour
 					GameObject.Find("Canvas/DetailWindow/Content/ClearStamp").GetComponent<Image>().enabled = true;
 				}
 				// 詳細ウィンドウ表示状態へ
-				CStageSelectState.Instance._state = CStageSelectState.STATE.DETAIL;
+				CStageSelectState.Instance._nextState = CStageSelectState.STATE.DETAIL;
+				// 選択されているステージ番号を保持する
+				CStageDataManager.Instance.selectStageIndex = index;
 			}
 			else
 			{

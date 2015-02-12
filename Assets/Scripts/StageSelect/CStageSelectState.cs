@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CStageSelectState : SingletonMonoBehaviour<CStageSelectState>
+public class CStageSelectState : CSingletonMonoBehaviour<CStageSelectState>
 {
 	// 状態一覧
 	public enum STATE
@@ -11,7 +11,14 @@ public class CStageSelectState : SingletonMonoBehaviour<CStageSelectState>
 		DETAIL
 	};
 	// 現在の状態
-	public STATE _state = STATE.NONE;
+	private STATE _state = STATE.NONE;
+	public STATE state
+	{
+		get{ return _state; }
+	}
+	// 次の状態
+	public STATE _nextState = STATE.NONE;
+
 
 	/**
      * 起動時処理
@@ -24,7 +31,7 @@ public class CStageSelectState : SingletonMonoBehaviour<CStageSelectState>
 			Destroy( gameObject );
 			return;
 		}
-		DontDestroyOnLoad( this.gameObject );
+		//DontDestroyOnLoad( this.gameObject );
 	}
 	
 	// Use this for initialization
@@ -33,7 +40,11 @@ public class CStageSelectState : SingletonMonoBehaviour<CStageSelectState>
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+		if( _state != _nextState )
+		{
+			_state = _nextState;
+		}
 	}
 }

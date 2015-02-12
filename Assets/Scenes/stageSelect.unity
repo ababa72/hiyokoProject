@@ -605,7 +605,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1019254667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1423199171}
+        m_MethodName: detailOkButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1019254667
@@ -935,6 +947,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageXml: {fileID: 4900000, guid: 2442fcee7d87e274da2f2662f6a9f460, type: 3}
+  _gameScenePath:
+  - mode1
+  - mode2
+  - mode3
 --- !u!4 &1408839960
 Transform:
   m_ObjectHideFlags: 0
@@ -1198,7 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af80a802def3124dbd570a78329e29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _state: -1
+  _nextState: -1
 --- !u!1 &1447436341
 GameObject:
   m_ObjectHideFlags: 0

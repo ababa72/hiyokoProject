@@ -5,7 +5,7 @@ using System.Collections;
 /**
  * サウンド管理クラス
  */
-public class CSoundManager : SingletonMonoBehaviour<CSoundManager>
+public class CSoundManager : CSingletonMonoBehaviour<CSoundManager>
 {
 	// 音量
 	public SoundVolume volume = new SoundVolume();
