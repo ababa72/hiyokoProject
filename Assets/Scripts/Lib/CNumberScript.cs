@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections;
 
-public class NumberScript : MonoBehaviour {
+public class CNumberScript : MonoBehaviour {
 
 	// 
 	public int _num = -1;

@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 23a34b246bf741d4cb88e4c61c78a5fa
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _stageXml: {fileID: 4900000, guid: 2442fcee7d87e274da2f2662f6a9f460, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

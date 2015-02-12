@@ -19,3 +19,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestStage/satomune.unity
   - enabled: 1
     path: Assets/Scenes/stageSelect.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/mode1.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/mode2.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/mode3.unity

@@ -9,7 +9,7 @@ using System.Collections;
  * ・大量のデータをPlayerPrefsで管理するのは不向きらしいのでSQLite等の使用を検討
  *  http://bribser.co.jp/blog/post-319/
  */
-public class CSaveDataManager : SingletonMonoBehaviour<CSaveDataManager>
+public class CSaveDataManager : CSingletonMonoBehaviour<CSaveDataManager>
 {
 
 

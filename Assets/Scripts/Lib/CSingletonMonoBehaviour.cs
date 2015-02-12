@@ -4,7 +4,7 @@ using UnityEngine;
  * シングルトンMonoBehaviour
  * @see http://naichilab.blogspot.jp/2013/11/unitymanager.html
  */
-public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
+public class CSingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 {
 	
 	/**
