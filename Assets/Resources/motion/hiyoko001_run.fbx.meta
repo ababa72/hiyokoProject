@@ -84,7 +84,97 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/hips
+        weight: 1
+      - path: root/hips/chest
+        weight: 1
+      - path: root/hips/chest/head
+        weight: 1
+      - path: root/hips/chest/L_wing1
+        weight: 1
+      - path: root/hips/chest/L_wing1/L_wing2
+        weight: 1
+      - path: root/hips/chest/R_wing1
+        weight: 1
+      - path: root/hips/chest/R_wing1/R_wing2
+        weight: 1
+      - path: root/hips/L_leg
+        weight: 1
+      - path: root/hips/L_leg/L_knee
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe1
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe1/L_toe1_1
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe2
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe2/L_toe2_1
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe3
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe3/L_toe3_1
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe4
+        weight: 1
+      - path: root/hips/L_leg/L_knee/L_foot/L_toe4/L_toe4_1
+        weight: 1
+      - path: root/hips/R_leg
+        weight: 1
+      - path: root/hips/R_leg/R_knee
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe1
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe1/R_toe1_1
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe2
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe2/R_toe2_1
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe3
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe3/R_toe3_1
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe4
+        weight: 1
+      - path: root/hips/R_leg/R_knee/R_foot/R_toe4/R_toe4_1
+        weight: 1
+      - path: root/hips/tail
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
