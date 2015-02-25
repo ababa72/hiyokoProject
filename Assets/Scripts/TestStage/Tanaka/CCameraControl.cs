@@ -34,7 +34,8 @@ public class CCameraControl : MonoBehaviour
 			Slider slider = sObj.GetComponent <Slider> ();
 			slider.onValueChanged.AddListener((value) => {
 				// カメラ角度設定
-				Camera.main.transform.rotation = Quaternion.AngleAxis( value, new Vector3(1,0,0) );
+				//Camera.main.transform.rotation = Quaternion.AngleAxis( value, new Vector3(1,0,0) );
+				GameObject.Find( "ObjectRoot" ).transform.rotation = Quaternion.AngleAxis( value, new Vector3(1,0,0) );
 				// スライダーのつまみ部分に設定した角度を表示
 				GameObject.Find("Canvas/Slider/Handle Slide Area/Handle/CameraAngleText").GetComponent<Text>().text = Mathf.RoundToInt(value).ToString();
 			});
@@ -160,10 +161,10 @@ public class CCameraControl : MonoBehaviour
 	Vector2 convertCenter(Vector2 po)
 	{
 		// xz平面へ変換
-		Debug.Log( "変換前:" + po.ToString());
+		//Debug.Log( "変換前:" + po.ToString());
 		Vector3 po2 = new Vector3( po.x, po.y, Camera.main.transform.position.y );
 		Vector3 p = Camera.main.ScreenToWorldPoint(po2) - Camera.main.transform.position;
-		Debug.Log( "変換後:" + p.ToString());
+		//Debug.Log( "変換後:" + p.ToString());
 		return new Vector2(p.x, p.z);
 	}
 }

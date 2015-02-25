@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CSpawnUnitychan : MonoBehaviour
-{
-	public GameObject _modelPrefab = null;
+public class CSpawnHiyoko : MonoBehaviour {
 
+	public GameObject _modelPrefab = null;
+	
 	// 出現開始時間
 	private float _startTime;
 	// 出現間隔
 	private const float SPAWN_INTERVAL = 1;
 	// 最大出現数
 	private const float SPAWN_MAX = 3;
-
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -28,9 +28,9 @@ public class CSpawnUnitychan : MonoBehaviour
 				initSpawn();
 				// モデル生成
 				GameObject unitychan = Instantiate( _modelPrefab,
-				            // XZ平面上の画面内にランダム生成
-				            Camera.main.ViewportToWorldPoint( new Vector3( Random.value, Random.value, Camera.main.transform.position.y )),
-				            new Quaternion() ) as GameObject;
+				                                   // XZ平面上の画面内にランダム生成
+				                                   Camera.main.ViewportToWorldPoint( new Vector3( Random.value, Random.value, Camera.main.transform.position.y )),
+				                                   new Quaternion() ) as GameObject;
 				// オブジェクトルートへ
 				unitychan.transform.SetParent( GameObject.Find( "ObjectRoot" ).transform, false );
 				/*
@@ -40,13 +40,13 @@ public class CSpawnUnitychan : MonoBehaviour
 				unitychan.transform.LookAt( targetPos );
 				*/
 				// スクリプト取得
-				UnityChanControlScriptWithRgidBody script = (UnityChanControlScriptWithRgidBody)unitychan.GetComponent( "UnityChanControlScriptWithRgidBody" );
-				// 移動量を渡す
-				script._moveValue = (float)(0.3f + ( 0.7f * Random.value ));
+				CHiyokoBase script = (CHiyokoBase)unitychan.GetComponent( "CHiyokoBase" );
+				// 初期化
+				script.init( false );
 			}
 		}
 	}
-
+	
 	/**
 	 * 出現初期化
 	 */
@@ -54,7 +54,7 @@ public class CSpawnUnitychan : MonoBehaviour
 	{
 		_startTime = Time.time;
 	}
-
+	
 	/**
 	 * 出現確認
 	 */
