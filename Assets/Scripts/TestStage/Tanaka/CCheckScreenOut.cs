@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CCheckScreenOut : MonoBehaviour {
-	
+public class CCheckScreenOut : MonoBehaviour
+{
+	// 監視使用フラグ
+	public bool _enable = true;
 	//Margin
-	float margin = 0.1f; //マージン(画面外に出てどれくらい離れたら消えるか)を指定
+	float margin = 0.3f; //マージン(画面外に出てどれくらい離れたら消えるか)を指定
 	float negativeMargin;
 	float positiveMargin;
 
@@ -18,6 +20,12 @@ public class CCheckScreenOut : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		// 監視フラグが立っていないならスキップ
+		if( _enable == false )
+		{
+			return;
+		}
+
 		// 毎フレーム画面内確認を行う
 		if( isOutOfScreen( gameObject.transform ) )
 		{
@@ -33,7 +41,7 @@ public class CCheckScreenOut : MonoBehaviour {
 	{
 		Vector3 positionInScreen = Camera.main.WorldToViewportPoint(trns.position);
 		positionInScreen.z = trns.position.z;
-		
+
 		if (positionInScreen.x <= negativeMargin ||
 		    positionInScreen.x >= positiveMargin ||
 		    positionInScreen.y <= negativeMargin ||

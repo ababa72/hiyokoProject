@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -96,35 +96,72 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 				ret = new List<CStageData>();
 			}
 
-			int id = 0, mode = 0, unlock = 0;
-			int[] levels = new int[3];
+			int id = 0, unlock = 0, mode = -1, bg = -1;
+			int[] levels = null;
+			int[] parameters = null;
 
 			XmlNodeList stagecontent = stageInfo.ChildNodes;
-
 			id = int.Parse (stageInfo.Attributes ["id"].Value);
 			foreach (XmlNode child in stagecontent)
 			{
-				if (child.Name == "mode")
+				if (child.Name == "InitialUnlock")
+				{
+					unlock = int.Parse( child.InnerText );
+				}
+				else if (child.Name == "GameMode")
 				{
 					mode = int.Parse( child.InnerText );
 				}
-				else if (child.Name == "borderLine")
+				else if (child.Name == "BackGroundID")
 				{
-					//foreach (XmlNode levels in child.CloneNode)
+					bg = int.Parse( child.InnerText );
+				}
+				else if (child.Name == "Parameters")
+				{
+					parameters = new int[child.ChildNodes.Count];
+					for( int i = 0 ; i < child.ChildNodes.Count ; i++ )
+					{
+						parameters[ i ] = int.Parse( child.ChildNodes.Item (i).InnerText );
+					}
+				}
+				else if (child.Name == "BorderLine")
+				{
+					levels = new int[child.ChildNodes.Count];
 					for( int i = 0 ; i < child.ChildNodes.Count ; i++ )
 					{
 						levels[ i ] = int.Parse( child.ChildNodes.Item (i).InnerText );
 					}
 				}
-				else if (child.Name == "initial")
+			}
+			// パラメータセット
+			ret.Add( new CStageData(  id, (unlock == 1), mode, bg, parameters, levels ) );
+		}
+
+#if UNITY_EDITOR
+		// ステージ情報整合性チェック
+		for( int i = 0 ; i < ret.Count ; i++ )
+		{
+			for( int j = i + 1 ; j < ret.Count ; j++ )
+			{
+				// ID重複
+				if( ret[ i ].id == ret[ j ].id )
 				{
-					unlock = int.Parse( child.InnerText );
+					throw new Exception( "ステージID重複 : " + ret[ i ].id );
 				}
 			}
-
-			// パラメータセット
-			ret.Add( new CStageData(  id, mode, (unlock == 1), levels ) );
+			// ゲームモードID
+			if( ret[ i ].gamemodeID == -1 )
+			{
+				throw new Exception( "ステージゲームモードID値異常 : " + ret[ i ].id );
+			}
+			// 背景ID
+			if( ret[ i ].backgroundID == -1 )
+			{
+				throw new Exception( "ステージ背景ID値異常 : " + ret[ i ].id );
+			}
 		}
+#endif
+
 		return ret;
 	}
 
@@ -167,7 +204,7 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 	public void gotoSelectStageScene()
 	{
 		// selectStageIndex
-		string scenePath = _gameScenePath[ _stageDataList[ selectStageIndex ].mode ];
+		string scenePath = _gameScenePath[ _stageDataList[ selectStageIndex ].gamemodeID ];
 		Application.LoadLevel( scenePath );
 	}
 
