@@ -10,7 +10,7 @@ public class CSpawnHiyoko : MonoBehaviour {
 	// 出現間隔
 	private const float SPAWN_INTERVAL = 1;
 	// 最大出現数
-	private const float SPAWN_MAX = 3;
+	private const float SPAWN_MAX = 10;
 	
 	// Use this for initialization
 	void Start ()
@@ -26,23 +26,24 @@ public class CSpawnHiyoko : MonoBehaviour {
 			{
 				// 出現初期化
 				initSpawn();
-				// モデル生成
-				GameObject unitychan = Instantiate( _modelPrefab,
-				                                   // XZ平面上の画面内にランダム生成
-				                                   Camera.main.ViewportToWorldPoint( new Vector3( Random.value, Random.value, Camera.main.transform.position.y )),
-				                                   new Quaternion() ) as GameObject;
-				// オブジェクトルートへ
-				unitychan.transform.SetParent( GameObject.Find( "ObjectRoot" ).transform, false );
-				/*
-				// カメラの中心へむかせる
-				Vector3 targetPos = Camera.main.transform.position;
-				targetPos.y = 0;
-				unitychan.transform.LookAt( targetPos );
-				*/
-				// スクリプト取得
-				CHiyokoBase script = (CHiyokoBase)unitychan.GetComponent( "CHiyokoBase" );
-				// 初期化
-				script.init( false );
+
+				// カメラの右から左へ流す
+				{
+					// モデル生成
+					GameObject hiyoko = Instantiate( _modelPrefab,
+					                                   // XZ平面上の画面内にランダム生成
+					                                   Camera.main.ViewportToWorldPoint( new Vector3( 1.0f, Random.value, Camera.main.transform.position.y )),
+					                                   new Quaternion() ) as GameObject;
+					// オブジェクトルートへ
+					hiyoko.transform.SetParent( GameObject.Find( "ObjectRoot" ).transform, false );
+					// 左端へむかせる
+					hiyoko.transform.Rotate( 0, Random.Range( 225, 315 ), 0 );
+
+					// スクリプト取得
+					CHiyokoBase script = (CHiyokoBase)hiyoko.GetComponent( "CHiyokoBase" );
+					// 初期化
+					script.init( false );
+				}
 			}
 		}
 	}
@@ -74,7 +75,7 @@ public class CSpawnHiyoko : MonoBehaviour {
 					// シーン上に存在するオブジェクトならば処理.
 					if (obj.activeInHierarchy)	
 					{
-						if( obj.name.IndexOf( "unitychan" ) != -1 )
+						if( obj.name.IndexOf( "hiyoko" ) != -1 )
 						{
 							cnt++;
 						}
