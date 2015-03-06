@@ -55,6 +55,16 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 		}
 	}
 
+	// 選択中のステージ情報
+	public CStageData selectStage
+	{
+		get
+		{
+			return this[ selectStageIndex ];
+		}
+	}
+
+
 	/**
      * 起動時処理
      */

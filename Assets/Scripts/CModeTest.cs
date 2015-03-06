@@ -33,6 +33,11 @@ public class CModeTest : MonoBehaviour
 	{
 		// Canvas取得
 		GameObject canvas = GameObject.Find( "Canvas" );
+		if( canvas == null )
+		{
+			throw new System.Exception( "Canvasが設定されていません" );
+			return;
+		}
 		// 結果ウィンドウ生成
 		GameObject ins = (GameObject)Instantiate( _resultWindowPrefab, new Vector3(), new Quaternion() ) as GameObject;
 		ins.transform.localScale = new Vector3( 1, 1, 1 );
