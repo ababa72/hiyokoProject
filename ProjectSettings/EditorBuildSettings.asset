@@ -25,3 +25,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/mode2.unity
   - enabled: 1
     path: Assets/Scenes/Game/mode3.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/wilderness.unity

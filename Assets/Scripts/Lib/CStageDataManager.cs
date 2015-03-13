@@ -14,8 +14,17 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 {
 	// XMLファイルリソース
 	public TextAsset _stageXml;
-	// ゲームシーンPath一覧
-	public string[] _gameScenePath;
+	// TODO
+	// 現状背景シーンIDをハードコーディングしているが
+	// 後々外部ファイル化するのが好ましい
+	// 背景シーンPath一覧
+	public Dictionary<int, string> _backGroundPath = new Dictionary<int, string>()
+	{
+		{0, "mode1"},
+		{1, "mode2"},
+		{2, "mode3"},
+		{3, "wilderness"}
+	}; 
 
 	// ステージ情報配列
 	private List<CStageData> _stageDataList = null;
@@ -97,7 +106,6 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 		XmlDocument xmlDoc = new XmlDocument();
 		xmlDoc.LoadXml(xmlFile.text);
 		// XML解析処理
-		XmlNode root = xmlDoc.FirstChild;
 		XmlNodeList stageList = xmlDoc.GetElementsByTagName("data");
 		foreach(XmlNode stageInfo in stageList)
 		{
@@ -132,6 +140,7 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 					for( int i = 0 ; i < child.ChildNodes.Count ; i++ )
 					{
 						parameters[ i ] = int.Parse( child.ChildNodes.Item (i).InnerText );
+						Debug.Log( parameters[ i ] );
 					}
 				}
 				else if (child.Name == "BorderLine")
@@ -214,7 +223,8 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 	public void gotoSelectStageScene()
 	{
 		// selectStageIndex
-		string scenePath = _gameScenePath[ _stageDataList[ selectStageIndex ].gamemodeID ];
+		string scenePath = _backGroundPath[ selectStage.backgroundID ];
+		Debug.Log( _backGroundPath[ selectStage.backgroundID ] );
 		Application.LoadLevel( scenePath );
 	}
 
@@ -223,7 +233,7 @@ public class CStageDataManager : CSingletonMonoBehaviour<CStageDataManager>
 	 */
 	public void updateData( int score )
 	{
-		CStageData data = _stageDataList[ selectStageIndex ];
+		CStageData data = selectStage;
 
 		// スコアを更新しているなら
 		if( data.score < score )

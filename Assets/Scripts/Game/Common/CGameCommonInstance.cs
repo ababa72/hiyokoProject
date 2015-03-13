@@ -4,9 +4,7 @@ using System.Collections;
 public class CGameCommonInstance : CSingletonMonoBehaviour<CGameCommonInstance>
 {
 	// 結果画面Prefab
-	public GameObject 	_resultWindowPrefab;
-	// TODO
-	public bool _isResult = false;
+	public GameObject _resultWindowPrefab;
 
 	/**
      * 起動時処理
@@ -39,7 +37,6 @@ public class CGameCommonInstance : CSingletonMonoBehaviour<CGameCommonInstance>
 		if( canvas == null )
 		{
 			throw new System.Exception( "Canvasが設定されていません" );
-			return;
 		}
 
 		// 結果ウィンドウ生成

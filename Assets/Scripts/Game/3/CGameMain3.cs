@@ -5,7 +5,7 @@ using System.Collections;
 /**
  * ゲームメイン
  */
-public class CGameMain : MonoBehaviour
+public class CGameMain3 : CGameBase
 {
 	// 選択中のステージ情報
 	public CStageData _stageData;
@@ -18,31 +18,38 @@ public class CGameMain : MonoBehaviour
 	public float _startTime;
 
 
-	// Use this for initialization
-	void Start ()
+	/**
+	 * 初期化処理
+	 */
+	public override void init ()
 	{
 		// Stage情報取得
 		_stageData = CStageDataManager.Instance.selectStage;
 		// 制限時間を設定する
 		_startTime = Time.time;
-
 	}
 	
-	// Update is called once per frame
-	void Update () {
-
+	/**
+	 * 実行処理
+	 */
+	public override void main ()
+	{
 		// ミッション完了チェック
 		if( _targetTapCount >= _stageData.parameters[ 1 ] )
 		{
 			// 結果ウィンドウ表示
-			CGameCommonInstance.Instance.initResultWindow( Mathf.FloorToInt(  _startTime + _stageData.parameters[ 0 ] - Time.time ) );
+			setResult( Mathf.FloorToInt(  _startTime + _stageData.parameters[ 0 ] - Time.time ) );
+			// 結果ウィンドウ表示
+			//CGameCommonInstance.Instance.initResultWindow( Mathf.FloorToInt(  _startTime + _stageData.parameters[ 0 ] - Time.time ) );
 		}
 	
 		// 制限時間を超えていないか調べる
 		if( Time.time >= _startTime + _stageData.parameters[ 0 ]  )
 		{
 			// 結果ウィンドウ表示
-			CGameCommonInstance.Instance.initResultWindow( 0 );
+			setResult( 0 );
+			// 結果ウィンドウ表示
+			//CGameCommonInstance.Instance.initResultWindow( 0 );
 		}
 
 		// タップ回数表示

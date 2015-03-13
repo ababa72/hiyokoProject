@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class CTouchControl : MonoBehaviour
 {
-	private CGameMain _main;
+	private CGameMain3 _main;
 
 #if UNITY_EDITOR
 	// デバッグ機能
@@ -16,7 +16,7 @@ public class CTouchControl : MonoBehaviour
 
 	void Start()
 	{
-		_main = GameObject.Find( "Main Camera" ).GetComponent< CGameMain >();
+		_main = GameObject.Find( "Main Camera" ).GetComponent< CGameMain3 >();
 	}
 
 	void Update ()
