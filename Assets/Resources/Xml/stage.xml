@@ -6,12 +6,10 @@
     <data id="0">
       <InitialUnlock>1</InitialUnlock>
       <GameMode>0</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <BackGroundID>0</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>10</Level0>
@@ -19,11 +17,10 @@
         <Level2>30</Level2>
       </BorderLine>
     </data>
-
     <data id="1">
       <InitialUnlock>1</InitialUnlock>
       <GameMode>1</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <BackGroundID>1</BackGroundID>
       <Parameters>
         <Parameter0>0</Parameter0>
         <Parameter1>0</Parameter1>
@@ -39,7 +36,7 @@
     <data id="2">
       <InitialUnlock>1</InitialUnlock>
       <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <BackGroundID>2</BackGroundID>
       <Parameters>
         <Parameter0>0</Parameter0>
         <Parameter1>0</Parameter1>
@@ -53,13 +50,11 @@
       </BorderLine>
     </data>
     <data id="3">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -68,13 +63,11 @@
       </BorderLine>
     </data>
     <data id="4">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -83,13 +76,11 @@
       </BorderLine>
     </data>
     <data id="5">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -98,13 +89,11 @@
       </BorderLine>
     </data>
     <data id="6">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -113,13 +102,11 @@
       </BorderLine>
     </data>
     <data id="7">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -128,13 +115,11 @@
       </BorderLine>
     </data>
     <data id="8">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -143,13 +128,11 @@
       </BorderLine>
     </data>
     <data id="9">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -158,13 +141,11 @@
       </BorderLine>
     </data>
     <data id="10">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -173,13 +154,11 @@
       </BorderLine>
     </data>
     <data id="11">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -188,13 +167,11 @@
       </BorderLine>
     </data>
     <data id="12">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -203,13 +180,11 @@
       </BorderLine>
     </data>
     <data id="13">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -218,13 +193,11 @@
       </BorderLine>
     </data>
     <data id="14">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -233,13 +206,11 @@
       </BorderLine>
     </data>
     <data id="15">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -248,13 +219,11 @@
       </BorderLine>
     </data>
     <data id="16">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -263,13 +232,11 @@
       </BorderLine>
     </data>
     <data id="17">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -278,13 +245,11 @@
       </BorderLine>
     </data>
     <data id="18">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -293,13 +258,11 @@
       </BorderLine>
     </data>
     <data id="19">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -308,13 +271,11 @@
       </BorderLine>
     </data>
     <data id="20">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -323,13 +284,11 @@
       </BorderLine>
     </data>
     <data id="21">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -338,13 +297,11 @@
       </BorderLine>
     </data>
     <data id="22">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -353,13 +310,11 @@
       </BorderLine>
     </data>
     <data id="23">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -368,13 +323,11 @@
       </BorderLine>
     </data>
     <data id="24">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -383,13 +336,11 @@
       </BorderLine>
     </data>
     <data id="25">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -398,13 +349,11 @@
       </BorderLine>
     </data>
     <data id="26">
-      <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <GameMode>3</GameMode>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>
@@ -414,12 +363,10 @@
     </data>
     <data id="27">
       <GameMode>2</GameMode>
-      <BackGroundID>999</BackGroundID>
+      <BackGroundID>3</BackGroundID>
       <Parameters>
-        <Parameter0>0</Parameter0>
-        <Parameter1>0</Parameter1>
-        <Parameter2>0</Parameter2>
-        <Parameter3>0</Parameter3>
+        <Parameter0>180</Parameter0>
+        <Parameter1>10</Parameter1>
       </Parameters>
       <BorderLine>
         <Level0>30</Level0>

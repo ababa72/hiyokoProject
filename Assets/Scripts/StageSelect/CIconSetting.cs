@@ -55,7 +55,6 @@ public class CIconSetting : MonoBehaviour
 	// ボタンクリックイベント
 	void MyOnClick( int index )
 	{
-		Debug.Log( index );
 		// スクロール状態へなら選択可能
 		if( CStageSelectState.Instance.state == CStageSelectState.STATE.SCROLL )
 		{

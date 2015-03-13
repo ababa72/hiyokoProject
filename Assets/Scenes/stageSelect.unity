@@ -951,6 +951,7 @@ MonoBehaviour:
   - mode1
   - mode2
   - mode3
+  - tanaka
 --- !u!4 &1408839960
 Transform:
   m_ObjectHideFlags: 0

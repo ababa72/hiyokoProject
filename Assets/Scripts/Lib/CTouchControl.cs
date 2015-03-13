@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class CTouchControl : MonoBehaviour
 {
+	private CGameMain3 _main;
 
 #if UNITY_EDITOR
 	// デバッグ機能
@@ -12,6 +13,11 @@ public class CTouchControl : MonoBehaviour
 	// 表示時間
 	const float DRAW_TIME = 10f;
 #endif
+
+	void Start()
+	{
+		_main = GameObject.Find( "Main Camera" ).GetComponent< CGameMain3 >();
+	}
 
 	void Update ()
 	{
@@ -35,6 +41,7 @@ public class CTouchControl : MonoBehaviour
 				GameObject selectedGameObject = hit.collider.gameObject;
 				ITapBehaviour target = selectedGameObject.GetComponent(typeof(ITapBehaviour)) as ITapBehaviour;
 				if(target != null){
+					_main._targetTapCount++;
 					target.TapDown(ref hit);
 				}
 			}

@@ -11,8 +11,6 @@ using System.Collections;
  */
 public class CSaveDataManager : CSingletonMonoBehaviour<CSaveDataManager>
 {
-
-
 	/**
 	 * データ保存
 	 */
